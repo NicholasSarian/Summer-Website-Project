@@ -1,0 +1,116 @@
+<html>
+<head>
+	<title>Enable JavaScript</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="Tab-Icon.png">
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="Website-JavaScript.js"></script>
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="home.html">
+			<img src="Header.png" id="StickyImg">
+		</a>
+	</div>
+	
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+		<a href="home.html" class="calcHeight">Home</a>
+		<div class="slideToggle removeStuff">
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Binary & Hex</a>
+				<div class="Dropbtn removeStuff">
+					<a href="Binary&Hex/Binary.html">Binary</a>
+					<a href="Binary&Hex/Hex.html">Hexadecimal</a>
+					<div>
+						<a class="openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+						<div class="Dropdown-Content removeStuff DropContentWidth">
+							<a href="Binary&Hex/DEC-to-BI.html">Page 1<br>DEC to BI</a>
+							<a href="Binary&Hex/BI-to-HEX.html">Page 2<br>BI to HEX</a>
+							<a href="Binary&Hex/DEC-to-HEX.html">Page 3<br>DEC to HEX</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Protocols</a>
+				<div class="Dropbtn removeStuff">
+					<a href="Protocols/DHCP.html">DHCP</a>
+					<a href="Protocols/DNS.html">DNS</a>
+					<a href="Protocols/HTTP.html">HTTP</a>
+					<a href="Protocols/Ethernet.html">Ethernet</a>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Equipment</a>
+				<div class="Dropbtn removeStuff EquipWidth">
+					<a href="Equipment/Routers.html">Routers</a>
+					<a href="Equipment/Switches.html">Switches</a>
+				</div>
+			</div>
+			<a href="Terminology.html" class="closeOpen removeStuff">Terminology</a>
+			<a href="About.html" class="closeOpen removeStuff">About</a>
+		</div>
+		<a class="icon" onclick="myFunction()">
+			<i class="bars"></i>
+		</a>
+	</div>
+	<!---------- End of NavBar ---------->
+	
+	<div class="Text-Body">
+		<h2>How to Enable JavaScript</h2>
+		<p>
+			Here's how you can enable JavaScript in Chrome, Internet Explorer, Mozilla Firefox, Opera, and Safari:<br>
+			
+			<h2>Google Chrome</h2>
+			<ol>
+				<li>In the upper right hand corner of the window, click on the three dot menu.</li>
+				<li>Go down and click on "Settings".</li>
+				<li>Click on the three bar menu icon in the upper left corner of the window, expand "Advanced", and click on "Privacy and security".</li>
+				<li>Scroll down until you find "Content settings" then click on it.</li>
+				<li>Scroll down and find "JavaScript". Click on it and click on the slider to enable JavaScript.</li>
+				<li>Refresh the page</li>
+			</ol>
+		</p>
+		
+		<h2>Internet Explorer</h2>
+		<ol>
+			<li>Click on the gear icon in the upper right corner then click on "Internet Options".</li>
+			<li>Go to the "Security" tab.</li>
+			<li>On the "Security" tab, click on the "Custom level..." button.</li>
+			<li>In the "Secuirty Settings - Internet Zone" window, scroll down (near the bottom of the page) until you find the "Scripting" section.</li>
+			<li>Find "Active Scripting" and enable it then click "OK".</li>
+			<li>Click "Yes" on the warning window then "OK" to close the window.</li>
+			<li>Refresh the page</li>
+		</ol>
+		
+		<h2>Mozilla Firefox</h2>
+		<ol>
+			<li>In the upper right corner, click on the three bar menu icon then click on "Options".</li>
+			<li>Select the "Content" section from the options at the top of the pop-up page.</li>
+			<li>Check the box next to "Enable JavaScript" and click "OK".</li>
+			<li>Refresh the page</li>
+		</ol>
+		
+		<h2>Opera</h2>
+		<ol>
+			<li>Click on the Opera Button at the top-left corner of the window and click on "Settings".</li>
+			<li>Click on the "Websites" item in the left window pane.</li>
+			<li>Under JavaScript, select the "Allow all sites to run JavaScript (recommended)" option.</li>
+			<li>Now close the "Settings" window and restart Opera.</li>
+		</ol>
+		
+		<h2>Apple Safari</h2>
+		<ol>
+			<li>Open Safari then click on "Safari" in the top left of your screen and choose "Preferences".</li>
+			<li>Click on the "Security" tab.</li>
+			<li>Beside "Enable JavaScript", if the box is checked, JavaScript is enabled. If it's not checked, JavaScript is disabled. Check this box to enable JavaScript.</li>
+			<li>Close the "Preferences" window and refresh the page.</li>
+		</ol>
+	</div>
+	
+	<button onclick="topFunction()" id="myBtn">Top</button>
+</body>
+</html>

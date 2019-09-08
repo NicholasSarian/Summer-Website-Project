@@ -1,0 +1,116 @@
+<html>
+<head>
+	<title>Switches</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="../Tab-Icon.png">
+	<script src="../jquery-3.3.1.min.js"></script>
+	<script src="../Website-JavaScript.js"></script>
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="../home.html">
+			<img src="../Header.png" id="StickyImg">
+		</a>
+	</div>
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+		<a href="../home.html" class="calcHeight">Home</a>
+		<div class="slideToggle">
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Binary & Hex</a>
+				<div class="Dropbtn removeStuff">
+					<a href="../Binary&Hex/Binary.html">Binary</a>
+					<a href="../Binary&Hex/Hex.html">Hexadecimal</a>
+					<div>
+						<a class="openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+						<div class="Dropdown-Content removeStuff DropContentWidth">
+							<a href="../Binary&Hex/DEC-to-BI.html">Page 1<br>DEC to BI</a>
+							<a href="../Binary&Hex/BI-to-HEX.html">Page 2<br>BI to HEX</a>
+							<a href="../Binary&Hex/DEC-to-HEX.html">Page 3<br>DEC to HEX</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Protocols</a>
+				<div class="Dropbtn removeStuff">
+					<a href="../Protocols/DHCP.html">DHCP</a>
+					<a href="../Protocols/DNS.html">DNS</a>
+					<a href="../Protocols/HTTP.html">HTTP</a>
+					<a href="../Protocols/Ethernet.html">Ethernet</a>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="active closeOpen removeStuff">Equipment</a>
+				<div class="Dropbtn removeStuff EquipWidth">
+					<a href="Routers.html">Routers</a>
+					<a class="active">Switches</a>
+				</div>
+			</div>
+			<a href="../Terminology.html" class="closeOpen removeStuff">Terminology</a>
+			<a href="../About.html" class="closeOpen removeStuff">About</a>
+		</div>
+		<a class="icon" onclick="myFunction()">
+			<i class="bars"></i>
+		</a>
+	</div>
+	<!---------- End of NavBar ---------->
+	
+	<noscript>
+		<div class="Text-Body Text-Body-noJava">
+			<h2 style="color:black">JavaScript is Disabled</h2>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				It appears that JavaScript is disabled in your browser. Some of the functionality of this website relies on JavaScript. Please enable JavaScript in your browser then refresh this page.
+			</p>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				Don't know how to turn JavaScript on? <a href="HowToEnableJavaScript.html" class="Link">Here's how to enable JavaScript</a>
+			</p>
+		</div>
+	</noscript>
+	
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Switches</span>
+		</h1>
+			<img src="switch.png" id="CenterImg" width="75%">
+		<p>
+			<a id="Mac"></a> <!-- This is a jump link for the link at the bottom of the Hex page to focus on the Mac Address section. The link is placed here so that the page goes close to the center where MAC Address is explained.-->
+			Switches are used in LANs to allow electronic devices to communicate to each other within a network. Before I start explaining how switches work, I will explain what a MAC address is.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">MAC Address</span>
+		</h1>
+		<p>
+			A MAC address is a hexadecimal address that is assigned to the device at the factory. Each device has a unique MAC address. An example of what a MAC address looks like: <span style="color:red">ED:2A:03:1F:58:AA</span>. The MAC address is used to distinguish one device from another and is used in a variety of different ways, especially in switches. Unlike IP addresses that can change from hour to hour or day to day, MAC addresses don't change. Your device keeps the same MAC address forever.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">How Switches Work</span>
+		</h1>
+		<p>
+			Kind of like how a router has a routing table of networks, switches has a somewhat similar table called the MAC Table. In this MAC table, it consists of MAC addresses and which port the device with that MAC address is connected to. This helps the switch forward ethernet frames easier because it knows where that device is. However, if you had just powered on your switch, the switch's MAC table will be blank. Even if you plugged 10 devices into the switch, the table will still be blank until traffic starts traveling through the switch. When traffic begins coming in, the switch will have to flood the frame out all ports because it doesn't know where the destination MAC address is.
+		</p>
+		<p>
+			There are 3 types of switching forwarding:
+			<ol>
+				<li><span style="font-weight:bold">Filter</span> - The frame will get filtered if the destination is on the same port of the sender.</li>
+				<li><span style="font-weight:bold">Forward</span> - The switch will forward the frame out of one port and into another port.</li>
+				<li><span style="font-weight:bold">Flood</span> - The frame will get sent out of all ports (flooded) because the switch doesn't have the destination MAC address in its MAC table.</li>
+			</ol>
+		</p>
+		<p>
+			Switches build the MAC table by learning from the destination address of the ethernet frames that pass through it. When the switch doesn't know which port the destination MAC address is connected to, it will record the source address and which port the frame came from and then flood the frame out all ports. Only the device with that MAC address will respond; everyone else will discard the packet. As they are filtering, forwarding, and flooding frames, they build the MAC address. Once the switch has the MAC address of every device connected to it and which port they are connected to, the switch will no longer flood frames because it will already know where to send the frame out of. All switches really do is allow devices to communicate to each other within a LAN. They forward traffic out the correct port and allow the frame to traverse the LAN until it reaches the destination host.
+		</p>
+		<p>
+			If the switch receives a broadcast or multicast frame (the  MAC address in the destination address field will contain all F's which will look like this: FF:FF:FF:FF:FF:FF), just like it would with an unknown destination MAC address frame, the switch will flood the frame out all ports to get the frame where it needs to go.
+		</p>
+	</div>
+	
+	<button onclick="topFunction()" id="myBtn">Top</button>
+</body>
+</html>

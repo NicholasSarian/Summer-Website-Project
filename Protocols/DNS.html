@@ -1,0 +1,95 @@
+<html>
+<head>
+	<title>DNS</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="../Tab-Icon.png">
+	<script src="../jquery-3.3.1.min.js"></script>
+	<script src="../Website-JavaScript.js"></script>
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="../home.html">
+			<img src="../Header.png" id="StickyImg">
+		</a>
+	</div>
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+		<a href="../home.html" class="calcHeight">Home</a>
+		<div class="slideToggle">
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Binary & Hex</a>
+				<div class="Dropbtn removeStuff">
+					<a href="../Binary&Hex/Binary.html">Binary</a>
+					<a href="../Binary&Hex/Hex.html">Hexadecimal</a>
+					<div>
+						<a class="openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+						<div class="Dropdown-Content removeStuff DropContentWidth">
+							<a href="../Binary&Hex/DEC-to-BI.html">Page 1<br>DEC to BI</a>
+							<a href="../Binary&Hex/BI-to-HEX.html">Page 2<br>BI to HEX</a>
+							<a href="../Binary&Hex/DEC-to-HEX.html">Page 3<br>DEC to HEX</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="active closeOpen removeStuff">Protocols</a>
+				<div class="Dropbtn removeStuff">
+					<a href="DHCP.html">DHCP</a>
+					<a class="active">DNS</a>
+					<a href="HTTP.html">HTTP</a>
+					<a href="Ethernet.html">Ethernet</a>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Equipment</a>
+				<div class="Dropbtn removeStuff EquipWidth">
+					<a href="../Equipment/Routers.html">Routers</a>
+					<a href="../Equipment/Switches.html">Switches</a>
+				</div>
+			</div>
+			<a href="../Terminology.html" class="closeOpen removeStuff">Terminology</a>
+			<a href="../About.html" class="closeOpen removeStuff">About</a>
+		</div>
+		<a class="icon" onclick="myFunction()">
+			<i class="bars"></i>
+		</a>
+	</div>
+	<!---------- End of NavBar ---------->
+	
+	<noscript>
+		<div class="Text-Body Text-Body-noJava">
+			<h2 style="color:black">JavaScript is Disabled</h2>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				It appears that JavaScript is disabled in your browser. Some of the functionality of this website relies on JavaScript. Please enable JavaScript in your browser then refresh this page.
+			</p>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				Don't know how to turn JavaScript on? <a href="HowToEnableJavaScript.html" class="Link">Here's how to enable JavaScript</a>
+			</p>
+		</div>
+	</noscript>
+	
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">DNS</span>
+		</h1>
+		<p>
+			DNS stands for <span style="font-weight:bold">Domain Name Service</span>. DNS is responsible for name resolution. Whenever you type in an address like www.google.com, it's the DNS's job to resolve that name and find the IP address that belongs to www.google.com. You already know that, to get to a website you want to visit, you must type the website's address in the address bar. However, this doesn't tell the servers anything about what the IP address of the website you just entered is. DNS basically answers the question "What is the IP address of this host?".
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">How DNS Works</span>
+		</h1>
+		<p>
+			After every website address you type in is followed by an invisible dot. DNS resolves names backwards; from right to left. DNS starts with that imaginary dot at the end of the address and ask these servers called the <span style="font-weight:bold">Root Servers</span>. There are a total of 13 root servers throughout the world and these root servers are essentially the servers everyone goes to when they need to resolve a name. Each root server consists of a network of multiple servers (because there are billions of people in the world and even more devices). The root server will tell DNS where they can start, which is the .com, .net, .gov, etc. at the end of the address. That extension is called the top level domain. In our example, it ends with .com so the root servers will direct the DNS server to the .com top level domain. That top level domain will direct DNS to google; the second level domain. From there, DNS knows that www. is a computer name so they can start finding the IP address. Once the DNS server has found the IP address, they report back to you the IP address they have found and your computer can use that address to finally connect. Seems like a lot of work, doesn't it? Well, that's what has to happen to get the address of names.
+		</p>
+		<p>
+			Before starting any DNS lookup, your computer will look at its cache memory (basically a "memory bank" that holds several things, in this case, we're talking about IP address and names) and see if you have previously went to the website. If the website's IP address is already in your computers cache memory, then your computer doesn't have to bother the DNS server and can immediately start connecting to the site.
+		</p>
+	</div>
+	
+	<button onclick="topFunction()" id="myBtn">Top</button>
+</body>
+</html>

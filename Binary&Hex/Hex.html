@@ -1,0 +1,140 @@
+<html>
+<head>
+	<title>Hexadecimal</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="../Tab-Icon.png">
+	<script src="../jquery-3.3.1.min.js"></script>
+	<script src="../Website-JavaScript.js"></script>
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="../home.html">
+			<img src="../Header.png" id="StickyImg">
+		</a>
+	</div>
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+		<a href="../home.html" class="calcHeight">Home</a>
+		<div class="slideToggle">
+			<div class="Dropdown noJS">
+				<a class="active closeOpen removeStuff">Binary & Hex</a>
+				<div class="Dropbtn removeStuff">
+					<a href="Binary.html">Binary</a>
+					<a class="active">Hexadecimal</a>
+					<div>
+						<a class="openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+						<div class="Dropdown-Content removeStuff DropContentWidth">
+							<a href="DEC-to-BI.html">Page 1<br>DEC to BI</a>
+							<a href="BI-to-HEX.html">Page 2<br>BI to HEX</a>
+							<a href="DEC-to-HEX.html">Page 3<br>DEC to HEX</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Protocols</a>
+				<div class="Dropbtn removeStuff">
+					<a href="../Protocols/DHCP.html">DHCP</a>
+					<a href="../Protocols/DNS.html">DNS</a>
+					<a href="../Protocols/HTTP.html">HTTP</a>
+					<a href="../Protocols/Ethernet.html">Ethernet</a>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Equipment</a>
+				<div class="Dropbtn removeStuff EquipWidth">
+					<a href="../Equipment/Routers.html">Routers</a>
+					<a href="../Equipment/Switches.html">Switches</a>
+				</div>
+			</div>
+			<a href="../Terminology.html" class="closeOpen removeStuff">Terminology</a>
+			<a href="../About.html" class="closeOpen removeStuff">About</a>
+		</div>
+		<a class="icon" onclick="myFunction()">
+			<i class="bars"></i>
+		</a>
+	</div>
+	<!---------- End of NavBar ---------->
+	
+	<noscript>
+		<div class="Text-Body Text-Body-noJava">
+			<h2 style="color:black">JavaScript is Disabled</h2>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				It appears that JavaScript is disabled in your browser. Some of the functionality of this website relies on JavaScript. Please enable JavaScript in your browser then refresh this page.
+			</p>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				Don't know how to turn JavaScript on? <a href="HowToEnableJavaScript.html" class="Link">Here's how to enable JavaScript</a>
+			</p>
+		</div>
+	</noscript>
+	
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Hexadecimal</span>
+		</h1>
+			<img src="Hexadecimal.jpg" id="CenterImg">
+		<p>
+			Hexadecimal has a total of 16 numbers going from 0 - F and you read it from left to right. "0 - F" originally makes no sense but the numbers basically go like this:<br>
+			The first 10 numbers go from 0 - 9 and for the remaining 6 numbers, you use letters. So since 9 is the 10th number (0 counts as the 1st number), to get 11, you would use A. The number system would look something like this (Note: Deciaml is basically you average everyday numbers):
+		</p>
+		<table>
+			<tbody>
+				<tr>
+					<th>Hex Number</th>
+					<td>0</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>A</td>
+					<td>B</td>
+					<td>C</td>
+					<td>D</td>
+					<td>E</td>
+					<td>F</td>
+				</tr>
+				<tr>
+					<th>Decimal</th>
+					<td>0</td>
+					<td>1</td>
+					<td>2</td>
+					<td>3</td>
+					<td>4</td>
+					<td>5</td>
+					<td>6</td>
+					<td>7</td>
+					<td>8</td>
+					<td>9</td>
+					<td>10</td>
+					<td>11</td>
+					<td>12</td>
+					<td>13</td>
+					<td>14</td>
+					<td>15</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>
+			Hexadecimal is more complicated than binary. 4 bits of binary represents one number in hexadecimal. A Hexadecimal number would look something like this:<br>
+			A5:EF:11:4B:29:DC<br>
+			A hexadecimal number would contain a total of 6 bytes, each byte containing 8 bits each. Each letter or number consists of 4 bits each.
+	</div>
+	<div class="Text-Body">
+		<p>
+			Now for the actual counting part. Let's take the example above. Knowing what each value represents, you can convert the hex number into decimal to know what number it represents. For example, A5 would represent 165 in decimal. The easiest method in my opinion is to first <a href="DEC-to-Hex.html" class="Link">convert the hex into binary then convert the binary string into decimal</a>.
+		</p>
+		<p>
+			As for the actual use of hexadecimal, you won't find much use in it; however, hex is used in computers for some things such as for <a href="../Equipment/Switches.html#Mac" class="Link">MAC addresses</a>.
+		</p>
+	</div>
+	
+	<button onclick="topFunction()" id="myBtn">Top</button>
+</body>
+</html>

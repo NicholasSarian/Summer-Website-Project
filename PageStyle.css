@@ -1,0 +1,502 @@
+#myBtn, #CenterImg, #StickyImg, .button, table, .page, .LastFirstPage, .PageSelector, .NavBar {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#myBtn, .button, .ActivePage, .ActivePage:hover,
+.NavBar > a.active,
+.slideToggle > a.active,
+.Dropdown > a.active, .Dropdown > a.active:hover,
+.Dropbtn > a.active,
+.Dropbtn > div > a.active,
+.Dropdown-Content > a.active {
+	background-color: #3C8AFF; /* Fallback Color */
+	background: linear-gradient(#3C8AFF,#002866); 
+	background: -webkit-linear-gradient(#3C8AFF,#002866);
+	color: white;
+}
+
+#myBtn:hover,
+.button:hover,
+.PageSelector:hover:not(.ActivePage),
+.slideToggle > a:hover:not(.active),
+.NavBar > a:hover:not(.active),
+.Dropdown:hover > a:not(.active),
+.Dropbtn > a:hover:not(.active),
+.Dropbtn > div:hover > a:not(.active),
+.Dropdown-Content > a:hover:not(.active) {
+	background-color: #24DEFF; /* Fallback Color */
+	background: -webkit-linear-gradient(#24DEFF,#00505E);
+	background: linear-gradient(#24DEFF,#00505E); /* Light blue color */
+	color: white;
+}
+
+body {
+	background-image: url(Background.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	margin: 0;
+	font-family: "Times New Roman", Times, serif;: Times New Roman;
+}
+
+h1, h2 {
+	margin: 10px auto 10px auto;
+	text-align: center;
+	text-transform: uppercase;
+	color: blue;
+}
+
+p {
+	text-indent: 30px;
+}
+
+.Link { /* Styling the HyperLinks */
+	font-family: Arial Black, Arial;
+	text-decoration: none;
+	color: rgb(34,96,190); /* Medium Blue */
+	font-size: 15px;
+}
+
+.Link:hover {
+	color: rgb(25,181,209); /* Light Blue */
+}
+
+#myBtn {
+	display: none; /* Without this, the button will appear on page load even if the page is at the top */
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 99;
+	font-size: 18px;
+	border: none;
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px black;
+}
+
+#CenterImg { /* Centers the image on the pages with an image */
+	display: block;
+	margin: auto;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+@media screen and (max-width: 374px) {
+	#CenterImg {
+		width: 95%;
+		height: auto;
+	}
+}
+
+#StickyImg { /* Style for sticky header above NavBar */
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: auto;
+	max-height: 63px;
+	width: 90%;
+	max-width: 495px;
+	border: none;
+	vertical-align: middle;
+}
+
+#HeaderContainer {
+	height: 83px;
+	text-align: center;
+}
+
+#helper {
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+}
+
+.Text-Body {
+	margin: 20px auto 20px auto;
+	padding: 10px;
+	background-color: white; /* Fallback Color */
+	background-color: rgba(255,255,255,0.85);
+	border: 2px solid blue;
+	border-radius: 10px;
+	width: 75%;
+	box-shadow: 10px 10px 10px rgb(0,0,50);
+}
+
+.Text-Body-noJava {
+	background-color: rgb(255,177,177); /* Fallback Color */
+	background-color: rgba(255,177,177,0.75);
+	border: 2px solid red;
+	box-shadow: 10px 10px 10px rgb(50,0,0);
+}
+
+.Text-Body-noJava > p,
+.Text-Body > p,
+.Text-Body > p, ul, li {
+	font-size: 18px;
+}
+
+.Text-Body-Center { /* Centers descriptive text on Home page  */
+	text-align: center;
+}
+
+.button {
+	color: white;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	border-radius: 10px;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-webkit-transition: 0.5s;
+}
+
+.button:hover {
+	box-shadow: 5px 5px 15px black;
+}
+
+.CenterButton {
+	text-align: center;
+	margin: 10px auto 10px auto;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+	/* Add Animation - Zoom in the Modal */
+	animation: zoom 0.6s;
+	-webkit-animation: zoom 0.6s;
+	-o-animation: zoom 0.6s;
+	-moz-animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+	-webkit-transition: 0.3s;
+}
+
+.close:hover {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+table {
+	margin: auto;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+th, td {
+	text-align: center;
+	width: 90px;
+}
+
+/* ====================== Page Selector Styling ====================== */
+
+.page {
+	text-align: center;
+	margin: 20px auto 20px auto;
+	border: 2px solid blue;
+	background-color: white; /* Fallback Color */
+	background-color: rgba(255,255,255,0.75);
+	width: 315px;
+	border-radius: 10px;
+	padding: 20px;
+	box-shadow: 10px 10px 10px rgb(0,0,50);
+}
+
+.LastFirstPage {
+	background-color: transparent;
+	padding: 10px;
+	color: rgb(127,127,127); /* Medium Grey */
+	font-size: 20px;
+	margin-left: -4px;
+}
+
+.PageSelector  {
+	background-color: transparent;
+	border: none;
+	padding: 10px;
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	border-radius: 10px;
+}
+
+.ActivePage {
+	color: white;
+	border-radius: 10px;
+}
+
+/* =================================================================== */
+/* ========================= Start of NavBar ========================= */
+/* =================================================================== */
+
+.bars:after {
+	content: url(MenuIcon_White.png);
+}
+
+/* Change Menu Icon to black when you hover over it */
+.icon:hover > .bars:after {
+	content: url(MenuIcon_Black.png);
+}
+
+.icon {
+	display: none;
+	cursor: pointer;
+	height: 15px;
+}
+
+/* Color of NavBar */
+.NavBar {
+	background-color: black; /* Fallback Color */
+	background-color: rgba(0,0,0,0.70);
+	top: 0;
+	position: sticky;
+	position: -webkit-sticky;
+	height: 51px;
+	z-index: 99;
+}
+
+.fixedPos {
+	position: fixed;
+	width: 100%;
+}
+
+.relativePos {
+	position: relative;
+}
+
+.slideToggle > a,
+.NavBar > a,
+.Dropdown {
+	float: left;
+}
+
+.Dropdown > a,
+.Dropbtn > div > a {
+	cursor: default;
+}
+
+.slideToggle > a,
+.NavBar > a:not(:last-child),
+.Dropdown > a,
+.Dropbtn > a,
+.Dropbtn > div > a,
+.Dropdown-Content > a {
+	font-family: inherit;
+	font-size: 18px;
+	display: inline-block;
+	padding: 15px;
+	text-align: center;
+	text-decoration: none;
+}
+
+.slideToggle > a,
+.NavBar > a,
+.Dropdown > a {
+	color: white;
+}
+
+.Dropbtn > a,
+.Dropbtn > div > a,
+.Dropdown-Content > a {
+	color: black;
+}
+
+.slideToggle > a:not(:last-child),
+.NavBar > a,
+.Dropdown > a {
+	border-right: 1px solid white;
+}
+
+/* Hide Dropdown until you hover over it. Also contains styling */
+.Dropbtn,
+.Dropdown-Content {
+	display: none;
+	position: absolute;
+	background-color: white; /* Fallback Color */
+	background-color: rgba(255,255,255,0.85);
+	min-width: 100px;
+	box-shadow: 5px 5px 20px black;
+	z-index: 100;
+}
+
+/* For the Sub-Dropdown */
+.Dropdown-Content {
+	top: 102px;
+	left: 100%;
+}
+
+/* Display Dropdown and Sub-Dropdown vertically */
+.Dropbtn > a,
+.Dropbtn > div > a,
+.Dropdown-Content > a {
+	display: block;
+}
+
+.EquipWidth {
+	width: 109px;
+}
+
+.DropContentWidth {
+	width: 137px;
+}
+
+@media screen and (min-width: 634px) {
+	.noJS:hover > .Dropbtn,
+	.noJS > .Dropbtn > div:hover > .Dropdown-Content { 
+		display: block;
+	}
+}
+
+@media screen and (max-width: 633px) {
+	.NavBar.responsive > .slideToggle {
+		position: relative;
+		z-index: 100;
+	}
+	.NavBar.responsive {
+		background-color: transparent;
+	}
+	.slideToggle > a:not(:last-child),
+	.NavBar > a:first-child,
+	.Dropdown > a {
+		border-right: none;
+	}
+	.Dropbtn,
+	.Dropdown-Content {
+		background-color: transparent;
+		box-shadow: none;
+	}
+	.show { 
+		display: block;
+	}
+	.slideToggle a,
+	.Dropdown a {
+		display: none;
+	}
+	.NavBar a.icon {
+		float: right;
+		display: block;
+		border-right: none;
+		padding: 18px;
+	}
+	
+	.DropContentWidth, .EquipWidth {
+		width: 100%;
+	}
+	
+	/* Below are the items that affect the responsiveness of the NavBar */
+	.NavBar.responsive > .icon {
+		position: absolute;
+		right: 0;
+		top: 0;
+		background-color: transparent;
+	}
+	
+	/* Attempt to, somehow, position the .icon element to the Home link */
+	
+	.calcHeight:not(.active) {
+		background-color: white; /* Fallback Color */
+		background: linear-gradient(white, #505050);
+		background: -webkit-linear-gradient(white, #505050);
+	}
+	
+	.calcHeight:hover:not(.active) {
+		background-color: #C8C8C8; /* Fallback Color */
+		background: linear-gradient(#C8C8C8, #323232);
+		background: -webkit-linear-gradient(#C8C8C8, #323232);
+	}
+	
+	.NavBar.responsive .slideToggle a,
+	.NavBar.responsive > a {
+		float: none;
+		display: block !important;
+		text-align: center;
+		background-color: black; /* Fallback Color */
+		background-color: rgba(0,0,0,0.70);
+	}
+	.NavBar.responsive > .slideToggle > .Dropdown > .Dropbtn > a:not(.active),
+	.NavBar.responsive > .slideToggle > .Dropdown > .Dropbtn > div > a:not(.active)	{
+		background-color: white; /* Fallback Color */
+		background-color: rgba(255,255,255,0.9);
+		color: black;
+	}
+	
+	.NavBar.responsive > .slideToggle > .Dropdown > .Dropbtn > div > .Dropdown-Content > a	{
+		background-color: rgb(119,119,119); /* Fallback Color */
+		background-color: rgba(119,119,119,0.9);
+		color: white;
+	}
+	
+	/* Positions the dropdown vertically */
+	.NavBar.responsive .slideToggle .Dropdown {
+		float: none;
+	}
+	
+	/* Makes the content of the DropDown be positioned below the dropdown button */
+	.NavBar.responsive .slideToggle .Dropbtn {
+		position: relative;
+		z-index: 100;
+	}
+	
+	.NavBar.responsive > .slideToggle > .Dropdown > .Dropbtn > div > .Dropdown-Content {
+		position: relative;
+		top: 0;
+		left: 0;
+		background-color: transparent;
+	}
+	
+	/* Affects the dropdown within the NavBar */
+	.NavBar.responsive .slideToggle .Dropdown a {
+		display: block !important;
+		text-align: center;
+		background-color: black; /* Fallback Color */
+		background-color: rgba(0,0,0,0.70);
+	}
+}

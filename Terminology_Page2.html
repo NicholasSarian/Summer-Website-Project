@@ -1,0 +1,132 @@
+<html>
+<head>
+	<title>Terminology</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="Tab-Icon.png">
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="Website-JavaScript.js"></script>	
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="home.html">
+			<img src="Header.png" id="StickyImg">
+		</a>
+	</div>
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+	<a href="home.html" class="calcHeight">Home</a>
+	<div class="slideToggle">
+		<div class="Dropdown noJS">
+			<a class="closeOpen removeStuff">Binary & Hex</a>
+			<div class="Dropbtn removeStuff">
+				<a href="Binary&Hex/Binary.html">Binary</a>
+				<a href="Binary&Hex/Hex.html">Hexadecimal</a>
+				<div>
+					<a class="openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+					<div class="Dropdown-Content removeStuff DropContentWidth">
+						<a href="Binary&Hex/DEC-to-BI.html">Page 1<br>DEC to BI</a>
+						<a href="Binary&Hex/BI-to-HEX.html">Page 2<br>BI to HEX</a>
+						<a href="Binary&Hex/DEC-to-HEX.html">Page 3<br>DEC to HEX</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="Dropdown noJS">
+			<a class="closeOpen removeStuff">Protocols</a>
+			<div class="Dropbtn removeStuff">
+				<a href="Protocols/DHCP.html">DHCP</a>
+				<a href="Protocols/DNS.html">DNS</a>
+				<a href="Protocols/HTTP.html">HTTP</a>
+				<a href="Protocols/Ethernet.html">Ethernet</a>
+			</div>
+		</div>
+		<div class="Dropdown noJS">
+			<a class="closeOpen removeStuff">Equipment</a>
+			<div class="Dropbtn removeStuff EquipWidth">
+				<a href="Equipment/Routers.html">Routers</a>
+				<a href="Equipment/Switches.html">Switches</a>
+			</div>
+		</div>
+		<a class="active closeOpen removeStuff">Terminology</a>
+		<a href="About.html" class="closeOpen removeStuff">About</a>
+	</div>
+	<a class="icon" onclick="myFunction()">
+		<i class="bars"></i>
+	</a>
+</div>
+	<!---------- End of NavBar ---------->
+	
+	<noscript>
+		<div class="Text-Body Text-Body-noJava">
+			<h2 style="color:black">JavaScript is Disabled</h2>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				It appears that JavaScript is disabled in your browser. Some of the functionality of this website relies on JavaScript. Please enable JavaScript in your browser then refresh this page.
+			</p>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				Don't know how to turn JavaScript on? <a href="HowToEnableJavaScript.html" class="Link">Here's how to enable JavaScript</a>
+			</p>
+		</div>
+	</noscript>
+	
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Bandwidth</span>
+		</h1>
+		<p>
+			Bandwidth is the size of a pathway on a cable. Think of bandwidth as a pipe and water that travels through it as data. The wider the pipe, the more water can flow through it. Thinner pipes allow less water to travel through it than a thicker pipe. In bandwidth, more bandwidth allows more data to travel accross the cable. More is better.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">APiPA</span>
+		</h1>
+		<p>
+			APiPA stands for <span style="font-weight:bold">Automatic Private iP Address</span>. APiPA is an address that starts with 168.254.x.x (the "x" is a value that can range anywhere from 0 - 254). Your computer can't use this address to connect to the internet. Your computer will get an APiPA address if it is not able to contact the DHCP server to get a new address or renew the lease (the amount of time your computer will be allowed to use a particular address).
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Cache Memory</span>
+		</h1>
+		<p>
+			There is main memory and cache (pronounced as "cash") memory. Main memory is like your hard drive. It stores all your main things. It's bigger but also slower. Cache memory is smaller but faster. Basically, cache memory stores information for the purpose of being able to retrieve the same information quicker in the future. Let's say you constantly visit a site. When you visit the site the first time, it may take a while. Your computer will store the information it's getting from the website into cache memory so that if you visit the site again, it can easily pull that information out of cache memory and make the page quicker to load.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Subnet Mask</span>
+		</h1>
+		<p>
+			The Subnet Mask works alongside with IP Address. The subnet mask is used to determine which part of the IP address is part of the network and which is part of the host ID.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Default Gateway</span>
+		</h1>
+		<p>
+			The Default Gateway is a router that allows you to send packets to other networks. This comes into play a lot when you're going to websites on the internet. Since each website is on a different network, you need someway to exit your network and go to theirs. That's where the default gateway comes into play.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">PING</span>
+		</h1>
+		<p>
+			PING stands for <span style="color:red">Packet INternet Gopher</span>. You would run this in Command Prompt and this tool helps you determine if you're able to connect to a particular host, website, etc.; anything with an IP address. This tests connectivity by sending out 4 (or sometimes 5) packets to the target's name or IP address and if the packet gets there successfully, the target will send replies. These packets are just useless packets that don't have any purpose in itself. In Windows, the packet's payload will contain the alphabet, up to W. If the packet isn't big enough, the alphabet will repeat until the packet becomes big enough to send out. A ping command would look something like this: "<span style="color:red">Ping 8.8.8.8</span>". The <span style="color:red">8.8.8.8</span> is an IP address (this is actually the IP address of Google's DNS server)
+		</p>
+	</div>
+	
+	<div class="page">
+		<a class="PageSelector" href="Terminology.html">&#11160; Previous</span>
+		<a class="PageSelector" href="Terminology.html">1</a>
+		<a class="ActivePage PageSelector">2</a>
+		<a class="PageSelector" href="Terminology_Page3.html">3</a>
+		<a class="PageSelector" href="Terminology_Page3.html">Next &#11162; </a>
+	</div>
+	
+	<button onclick="topFunction()" id="myBtn">Top</button>
+</body>
+</html>

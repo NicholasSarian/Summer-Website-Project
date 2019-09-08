@@ -1,0 +1,129 @@
+<html>
+<head>
+	<title>Binary</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="../Tab-Icon.png">
+	<script src="../jquery-3.3.1.min.js"></script>
+	<script src="../Website-JavaScript.js"></script>
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="../home.html">
+			<img src="../Header.png" id="StickyImg">
+		</a>
+	</div>
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+	<a href="../home.html" class="calcHeight">Home</a>
+	<div class="slideToggle removeStuff">
+		<div class="Dropdown noJS">
+			<a class="active closeOpen removeStuff">Binary & Hex</a>
+			<div class="Dropbtn removeStuff">
+				<a class="active">Binary</a>
+				<a href="Hex.html">Hexadecimal</a>
+				<div>
+					<a class="openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+					<div class="Dropdown-Content removeStuff DropContentWidth">
+						<a href="DEC-to-BI.html">Page 1<br>DEC to BI</a>
+						<a href="BI-to-HEX.html">Page 2<br>BI to HEX</a>
+						<a href="DEC-to-HEX.html">Page 3<br>DEC to HEX</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="Dropdown noJS">
+			<a class="closeOpen removeStuff">Protocols</a>
+			<div class="Dropbtn removeStuff">
+				<a href="../Protocols/DHCP.html">DHCP</a>
+				<a href="../Protocols/DNS.html">DNS</a>
+				<a href="../Protocols/HTTP.html">HTTP</a>
+				<a href="../Protocols/Ethernet.html">Ethernet</a>
+			</div>
+		</div>
+		<div class="Dropdown noJS">
+			<a class="closeOpen removeStuff">Equipment</a>
+			<div class="Dropbtn removeStuff EquipWidth">
+				<a href="../Equipment/Routers.html">Routers</a>
+				<a href="../Equipment/Switches.html">Switches</a>
+			</div>
+		</div>
+		<a href="../Terminology.html" class="closeOpen removeStuff">Terminology</a>
+		<a href="../About.html" class="closeOpen removeStuff">About</a>
+	</div>
+	<a class="icon" onclick="myFunction()">
+		<i class="bars"></i>
+	</a>
+</div>
+	<!---------- End of NavBar ---------->
+	
+	<noscript>
+		<div class="Text-Body Text-Body-noJava">
+			<h2 style="color:black">JavaScript is Disabled</h2>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				It appears that JavaScript is disabled in your browser. Some of the functionality of this website relies on JavaScript. Please enable JavaScript in your browser then refresh this page.
+			</p>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				Don't know how to turn JavaScript on? <a href="HowToEnableJavaScript.html" class="Link">Here's how to enable JavaScript</a>
+			</p>
+		</div>
+	</noscript>
+	
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Binary</span>
+		</h1>
+		<img src="binary.jpg" id="CenterImg">
+		<p>
+			Binary is essentially the language in which computers use to do almost everything. An example of what a binary number may look like is this: 10011101.
+		</p>
+		<p>
+			Before we start understanding what this strange number is, you must first understand what a byte and bit is. A byte consist of 8 bits. A bit is basically a single number. For example, 1 is a single bit; 25 is 2 bits, 123 is 3 bits, etc. A binary number usually consist of 8 bits.
+		</p>
+		<p>
+			Usually, numbers range from 0-9; however, in binary, there are only 2 numbers: 0 and 1. The numerical value of a binary string (a string, in binary, is a single set of 8 bits) depends on where the 1's and 0's are located. In a binary string, the string is read from right to left and the count starts at 1. The 1st bit is 1, multiply that by 2 to get 2. Multiply that by 2 to get 4. Keep on multiplying my 2 until you reach the 8th bit.
+	</div>
+	<div class="Text-Body">
+		<p>
+			Now to understand how to count binary. Basically, based on the binary example I gave above, the count will look like this:<br>
+		</p>
+			<table>
+				<caption>How to Count Binary</caption>
+				<tbody>
+					<tr>
+						<th>1</th>
+						<th>0</th>
+						<th>0</th>
+						<th>1</th>
+						<th>1</th>
+						<th>1</th>
+						<th>0</th>
+						<th>1</th>
+					</tr>
+					<tr>
+						<td>128</td>
+						<td>64</td>
+						<td>32</td>
+						<td>16</td>
+						<td>8</td>
+						<td>4</td>
+						<td>2</td>
+						<td>1</td>
+					</tr>
+				</tbody>
+			</table>
+		<p>
+			Basically as you can see in the bottom row, the numbers are getting doubled. Remember, read this from right to left, NOT from left to right. 1 x 2 = 2, 2 x 2 = 4, 4 x 2 = 8, etc.<br>
+			In binary, to find out what number the string represents, you add the numbers together such as 1 + 128. But hold on there, don't start adding just yet. There's a reason why some of the values on the top row are 1 and some are 0. You can think of the 1's as "on" and 0's as "off"; like flipping a light switch. A 1 means you will count that number in your math problem. A 0 means you ignore the number it represents. In the example above, the math problem would be 1 + 4 + 8 + 16 + 128 which equals 157.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<p>
+			At this point, hopefully you understand how to count binary. It requires very basic math skills. We, as humans, have no use for binary but computers use binary all the time. It's their language and it can help a little to understand it. You don't need to worry about knowing how to actually use binary, it's just useful to understand a little more about binary.
+		</p>
+	</div>
+	
+	<button onclick="topFunction()" id="myBtn">Top</button>
+</body>
+</html>

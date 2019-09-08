@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>Convert Binary to Hex & Hex to Binary</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="../Tab-Icon.png">
+	<script src="../jquery-3.3.1.min.js"></script>
+	<script src="../Website-JavaScript.js"></script>
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="../home.html">
+			<img src="../Header.png" id="StickyImg">
+		</a>
+	</div>
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+	<a href="../home.html" class="calcHeight">Home</a>
+	<div class="slideToggle">
+		<div class="Dropdown noJS">
+			<a class="active closeOpen removeStuff">Binary & Hex</a>
+			<div class="Dropbtn removeStuff">
+				<a href="Binary.html">Binary</a>
+				<a href="Hex.html">Hexadecimal</a>
+				<div>
+					<a class="active openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+					<div class="Dropdown-Content removeStuff DropContentWidth">
+						<a href="DEC-to-BI.html">Page 1<br>DEC to BI</a>
+						<a class="active">Page 2<br>BI to HEX</a>
+						<a href="DEC-to-HEX.html">Page 3<br>DEC to HEX</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="Dropdown noJS">
+			<a class="closeOpen removeStuff">Protocols</a>
+			<div class="Dropbtn removeStuff">
+				<a href="../Protocols/DHCP.html">DHCP</a>
+				<a href="../Protocols/DNS.html">DNS</a>
+				<a href="../Protocols/HTTP.html">HTTP</a>
+				<a href="../Protocols/Ethernet.html">Ethernet</a>
+			</div>
+		</div>
+		<div class="Dropdown noJS">
+			<a class="closeOpen removeStuff">Equipment</a>
+			<div class="Dropbtn removeStuff EquipWidth">
+				<a href="../Equipment/Routers.html">Routers</a>
+				<a href="../Equipment/Switches.html">Switches</a>
+			</div>
+		</div>
+		<a href="../Terminology.html" class="closeOpen removeStuff">Terminology</a>
+		<a href="../About.html" class="closeOpen removeStuff">About</a>
+	</div>
+	<a class="icon" onclick="myFunction()">
+		<i class="bars"></i>
+	</a>
+</div>
+	<!---------- End of NavBar ---------->
+	
+	<noscript>
+		<div class="Text-Body Text-Body-noJava">
+			<h2 style="color:black">JavaScript is Disabled</h2>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				It appears that JavaScript is disabled in your browser. Some of the functionality of this website relies on JavaScript. Please enable JavaScript in your browser then refresh this page.
+			</p>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				Don't know how to turn JavaScript on? <a href="HowToEnableJavaScript.html" class="Link">Here's how to enable JavaScript</a>
+			</p>
+		</div>
+	</noscript>
+	
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Convert Binary to Hexadecimal</span>
+		</h1>
+		<p>
+			Before we start, let's use the binary string <span style="color:red">10010111</span> in this example to learn how to convert it. Converting this is hexadecimal is actually super easy. First, you want to split the string into 2 sets of 4 bits which would look like this <span style="color:red">1001 0111</span>. Assuming you've read the first page first before going here, you know how to convert binary to decimal. These 2 sets of 4 bits are treated separately and therefore, the count (from the farthest right bit) starts with 1. 1001 becomes 9 and 0111 becomes 7. Now you combine the two numbers to get 97. The hexadecimal for 10010111 is 97.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Convert Hexadecimal to Binary</span>
+		</h1>
+		<p>
+			Converting hexadecimal to binary is just as easy, if not easier. You got the hex number 97. All you do is separate the two numbers and convert each to binary then conbine them again. Basically, you're reversing the process above. 9 becomes 1001 and 7 becomes 0111. Combine them to get 10010111. That's it! Seriously, that's it, it's very simple.
+		</p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<html>
+<head>
+	<title>Terminology</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="Tab-Icon.png">
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="Website-JavaScript.js"></script>
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="home.html">
+			<img src="Header.png" id="StickyImg">
+		</a>
+	</div>
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+	<a href="home.html" class="calcHeight">Home</a>
+	<div class="slideToggle removeStuff">
+		<div class="Dropdown noJS">
+			<a class="closeOpen">Binary & Hex</a>
+			<div class="Dropbtn removeStuff">
+				<a href="Binary&Hex/Binary.html">Binary</a>
+				<a href="Binary&Hex/Hex.html">Hexadecimal</a>
+				<div>
+					<a class="openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+					<div class="Dropdown-Content removeStuff DropContentWidth">
+						<a href="Binary&Hex/DEC-to-BI.html">Page 1<br>DEC to BI</a>
+						<a href="Binary&Hex/BI-to-HEX.html">Page 2<br>BI to HEX</a>
+						<a href="Binary&Hex/DEC-to-HEX.html">Page 3<br>DEC to HEX</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="Dropdown noJS">
+			<a class="closeOpen removeStuff">Protocols</a>
+			<div class="Dropbtn removeStuff">
+				<a href="Protocols/DHCP.html">DHCP</a>
+				<a href="Protocols/DNS.html">DNS</a>
+				<a href="Protocols/HTTP.html">HTTP</a>
+				<a href="Protocols/Ethernet.html">Ethernet</a>
+			</div>
+		</div>
+		<div class="Dropdown noJS">
+			<a class="closeOpen removeStuff">Equipment</a>
+			<div class="Dropbtn removeStuff EquipWidth">
+				<a href="Equipment/Routers.html">Routers</a>
+				<a href="Equipment/Switches.html">Switches</a>
+			</div>
+		</div>
+		<a class="active closeOpen removeStuff">Terminology</a>
+		<a href="About.html" class="closeOpen removeStuff">About</a>
+	</div>
+	<a class="icon" onclick="myFunction()">
+		<i class="bars"></i>
+	</a>
+</div>
+	<!---------- End of NavBar ---------->
+	
+	<noscript>
+		<div class="Text-Body Text-Body-noJava">
+			<h2 style="color:black">JavaScript is Disabled</h2>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				It appears that JavaScript is disabled in your browser. Some of the functionality of this website relies on JavaScript. Please enable JavaScript in your browser then refresh this page.
+			</p>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				Don't know how to turn JavaScript on? <a href="HowToEnableJavaScript.html" class="Link">Here's how to enable JavaScript</a>
+			</p>
+		</div>
+	</noscript>
+	
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">TTL</span>
+		</h1>
+		<p>
+			TTL <span style="font-weight:bold">(Time to Live)</span> is part of the packets frame. In the past, before James L. Buie (inventor of TTL) invented TTL, people had problems with packets looping endlessly between routers. When a packet travels through routers, the routers would do what routers do with packets and forward the packet to the next router. However, if there's a problem in the destination address, the routers might get confused and send the packet back out the port it just received the packet from. This causes the packet to loop between the routers infinitly and there wasn't anything to stop this. That was until the inventor created Time to Live (TTL). With this, you can think of it as "lives". The packet will be given a TTL number, such as 100, and if this TTL number reaches 0, the packet will be discarded. <a id="skip2ARP"></a><!--This link is to jump from DHCP Page link at bottom to the ARP section on this page--> Everytime a packet gets to a router, they will subtract 1 from the TTL field then forward the packet on its way. If, for some reason, a loop occurs, the TTL field will get continuiously subtracted by 1 until it reaches 0.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">ARP</span>
+		</h1>
+		<p>
+			ARP stands for <span style="font-weight:bold">Address Resolution Protocol</span>. A computer might send out an ARP packet if they have the IP address of the target but not their MAC address. The computer would send out an ARP packet asking "Who has IP address x.x.x.x and what is your MAC address?" (the X's are any number from 0 - 255 except the last byte which can only go up to 254). The computer that has the IP address the sender is asking for will send an ARP reply packet back to the sender letting them know what their MAC address is. This is especially important when they need to make an Ethernet frame which requires the target's MAC address in the destination address field.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">NAT</span>
+		</h1>
+		<p>
+			NAT stands for <span style="font-weight:bold">Network Address Translation</span>. In terms of IP addresses, there are 3 network ID's that are considered unregistered and as a result, can't be used to go to the internet. Those are:<br>
+			10.0.0.0 - 10.255.255.255<br>
+			172.16.0.0 - 172.31.255.255<br>
+			192.168.0.0 - 192.168.255.255<br>
+			Because you are not able to use any one of the above IP address ranges to connect to the network, you need a NAT. What the NAT does is, if you have a network that lies within any of the above IP addresses, when you send a packet to the internet, NAT will take your IP address and replace it with its own IP address. Let's say your NAT box has IP address 11.15.243.19 and your network is 172.17.0.0, when you try to send a packet out to the internet (to connect to a website), NAT will replace your IP address with its own IP address. This is kind of like disguising your address as the NAT's address. With NAT, this allows you to go out onto the internet with an unregistered IP address. However, this has a big problem. If two people go to the same website requesting something from the website or just trying to connect to it, then how will NAT know which reply packet is for who when the website's servers reply back? The destination IP address will be the same in both packets so there would be no way for NAT to know which packet belongs to who. That's where PAT comes into play. Read more below.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">PAT</span>
+		</h1>
+		<p>
+			PAT stands for <span style="font-weight:bold">Port Address Translation</span> and PAT works with NAT. Basically, whenever NAT replaces the source address with its own address, PAT will assign a port number to the source address. Each packet that gets sent out gets a different port number. This solves the problem above because if two users attempt to access the same website and they are going through NAT, the packets will have a unique port number attached to them. Using the above IP address example, let's say two users with, one with address 172.16.11.12 and another with 172.16.11.15, both try to connect to www.google.com, the source address (without PAT) will look like 11.15.243.19. Without PAT, NAT won't know which reply packet belongs to who so PAT will apply a port number behind the source address. That would look something like this (the :1500 & :1982 that's beside the address is the port number):<br>
+			11.15.243.19<span style="color:red">:1500</span><br>
+			11.15.243.19<span style="color:red">:1982</span><br>
+			With the port numbers beside the source address, the Google's servers will apply that port number beside the destination address when it sends a reply packet back to NAT. This helps NAT greatly because NAT can know which reply belongs to who and can send the reply to the correct person.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">PoE</span>
+		</h1>
+		<p>
+			PoE stands for <span style="font-weight:bold">Power over Ethernet</span>. PoE is a feature on some switches. PoE is used for those devices that are often not close to an outlit, such as a WiFi Wireless Access Point (WAP) that hangs on the ceiling. PoE provides the devices with Ethernet operability as well as the electricity the device needs to operate. PoE can run over regular patch cables and PoE should be used only for those devices that won't otherwise be able to be plugged into an outlit due to where it's positioned.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">VM</span>
+		</h1>
+		<p>
+			VM stands for <span style="font-weight:bold">Virtural Machine</span>. VM's are basically the exact same as your computer; but on a computer. A VM is like a computer that's within another computer. A server can host multiple VM's that are running the same OS. The purpose of them is to kind of split the workload between machines without having multiple servers to achieve that. Having a server running 5 VM's is better than having 6 different servers (the server mentioned plus the five other servers). VM's help reduce the amount of physical servers you need to run services. There are some services that should be the only thing on the server that runs because the service may require most of the server's resources to run properly.
+		</p>
+	</div>
+	
+	<div class="page">
+		<a class="PageSelector" href="Terminology_Page2.html">&#11160; Previous</a>
+		<a class="PageSelector" href="Terminology.html">1</a>
+		<a class="PageSelector" href="Terminology_Page2.html">2</a>
+		<a class="ActivePage PageSelector">3</a>
+		<span class="LastFirstPage">Next &#11162; </span>
+	</div>
+	
+	<button onclick="topFunction()" id="myBtn">Top</button>
+</body>
+</html>

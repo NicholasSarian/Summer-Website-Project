@@ -1,0 +1,90 @@
+<html>
+<head>
+	<title>Convert Decimal to Hex & Hex to Decimal</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="../Tab-Icon.png">
+	<script src="../jquery-3.3.1.min.js"></script>
+	<script src="../Website-JavaScript.js"></script>
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="../home.html">
+			<img src="../Header.png" id="StickyImg">
+		</a>
+	</div>
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+		<a href="../home.html" class="calcHeight">Home</a>
+		<div class="slideToggle">
+			<div class="Dropdown noJS">
+				<a class="active closeOpen removeStuff">Binary & Hex</a>
+				<div class="Dropbtn removeStuff">
+					<a href="Binary.html">Binary</a>
+					<a href="Hex.html">Hexadecimal</a>
+					<div>
+						<a class="active openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+						<div class="Dropdown-Content removeStuff DropContentWidth">
+							<a href="DEC-to-BI.html">Page 1<br>DEC to BI</a>
+							<a href="BI-to-HEX.html">Page 2<br>BI to HEX</a>
+							<a class="active">Page 3<br>DEC to HEX</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Protocols</a>
+				<div class="Dropbtn removeStuff">
+					<a href="../Protocols/DHCP.html">DHCP</a>
+					<a href="../Protocols/DNS.html">DNS</a>
+					<a href="../Protocols/HTTP.html">HTTP</a>
+					<a href="../Protocols/Ethernet.html">Ethernet</a>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Equipment</a>
+				<div class="Dropbtn removeStuff EquipWidth">
+					<a href="../Equipment/Routers.html">Routers</a>
+					<a href="../Equipment/Switches.html">Switches</a>
+				</div>
+			</div>
+			<a href="../Terminology.html" class="closeOpen removeStuff">Terminology</a>
+			<a href="../About.html" class="closeOpen removeStuff">About</a>
+		</div>
+		<a class="icon" onclick="myFunction()">
+			<i class="bars"></i>
+		</a>
+	</div>
+	<!---------- End of NavBar ---------->
+	
+	<noscript>
+		<div class="Text-Body Text-Body-noJava">
+			<h2 style="color:black">JavaScript is Disabled</h2>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				It appears that JavaScript is disabled in your browser. Some of the functionality of this website relies on JavaScript. Please enable JavaScript in your browser then refresh this page.
+			</p>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				Don't know how to turn JavaScript on? <a href="HowToEnableJavaScript.html" class="Link">Here's how to enable JavaScript</a>
+			</p>
+		</div>
+	</noscript>
+	
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Convert Decimal to Hexadecimal</span>
+		</h1>
+		<p>
+			The easiest method (in my opinion) is converting the decimal to binary then to hex. This is a two step process. Let's use the number 150. Big number, eh? Don't worry, it's not all that bad. First, convert 150 to binary. 150 in binary is <span style="color:red">10010110</span>. Remember to split the number so you'll have <span style="color:red">1001 0110</span>. 1001 is 9 and 0110 is 6. The hexadecimal number of 150 is <span style="color:red">96</span>. Assuming you've read the other two pages first, this is very simple.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Convert Hexadecimal to Decimal</span>
+		</h1>
+		<p>
+			Converting the hexadecimal back to decimal is as simple as reversing the above process. 96 gets split up to become 9 and 6. 9 becomes 1001 and 6 becomes 0110. Together, that's 10010110. The binary string 10010110, converted into decimal, becomes 150. At this point, you're just repeating everything you've learn previously. Converting between decimal, binary, and hexadecimal is very easy to understand. You just got to get your head into it and you'll get it.
+		</p>
+	</div>
+</body>
+</html>

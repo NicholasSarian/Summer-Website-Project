@@ -1,0 +1,126 @@
+<html>
+<head>
+	<title>Ethernet</title>
+	<meta id="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="../Tab-Icon.png">
+	<script src="../jquery-3.3.1.min.js"></script>
+	<script src="../Website-JavaScript.js"></script>
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="../home.html">
+			<img src="../Header.png" id="StickyImg">
+		</a>
+	</div>
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+		<a href="../home.html" class="calcHeight">Home</a>
+		<div class="slideToggle">
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Binary & Hex</a>
+				<div class="Dropbtn removeStuff">
+					<a href="../Binary&Hex/Binary.html">Binary</a>
+					<a href="../Binary&Hex/Hex.html">Hexadecimal</a>
+					<div>
+						<a class="openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+						<div class="Dropdown-Content removeStuff DropContentWidth">
+							<a href="../Binary&Hex/DEC-to-BI.html">Page 1<br>DEC to BI</a>
+							<a href="../Binary&Hex/BI-to-HEX.html">Page 2<br>BI to HEX</a>
+							<a href="../Binary&Hex/DEC-to-HEX.html">Page 3<br>DEC to HEX</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="active closeOpen removeStuff">Protocols</a>
+				<div class="Dropbtn removeStuff">
+					<a href="DHCP.html">DHCP</a>
+					<a href="DNS.html">DNS</a>
+					<a href="HTTP.html">HTTP</a>
+					<a class="active">Ethernet</a>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Equipment</a>
+				<div class="Dropbtn removeStuff EquipWidth">
+					<a href="../Equipment/Routers.html">Routers</a>
+					<a href="../Equipment/Switches.html">Switches</a>
+				</div>
+			</div>
+			<a href="../Terminology.html" class="closeOpen removeStuff">Terminology</a>
+			<a href="../About.html" class="closeOpen removeStuff">About</a>
+		</div>
+		<a class="icon" onclick="myFunction()">
+			<i class="bars"></i>
+		</a>
+	</div>
+	<!---------- End of NavBar ---------->
+	
+	<noscript>
+		<div class="Text-Body Text-Body-noJava">
+			<h2 style="color:black">JavaScript is Disabled</h2>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				It appears that JavaScript is disabled in your browser. Some of the functionality of this website relies on JavaScript. Please enable JavaScript in your browser then refresh this page.
+			</p>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				Don't know how to turn JavaScript on? <a href="HowToEnableJavaScript.html" class="Link">Here's how to enable JavaScript</a>
+			</p>
+		</div>
+	</noscript>
+	
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Ethernet</span>
+		</h1>
+		<p>
+			Ethernet is commonly used in a Local Area Network (LAN). A LAN is a network of computers and other electronic devices that span a small area such as an office, building floor, or an entire building. Ethernet is a protocol that controls how data is transmitted over a LAN. Some common speeds of Ethernet is 10BaseT (10Mbps, which is slow), 100BaseT (100Mbps, faster than 10BaseT), and 1000BaseT (1Gbps, this one is relatively common). 100BaseT is called Fast Ethernet and 1000BaseT is called Gigabit Ethernet. These are the speed in which data can cross the cable. If you have a desktop computer, you most likely already have an Ethernet cable attached to the back of your computer. That cable is the cable that your packets are travelling across.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<p>
+			When it comes to sending out packets, there are 3 types of Ethernet addresses:
+			<ul>
+				<li>Unicast - The user sends the packet to a single target, i.g. The user sends packets to a website they want to connect to.</li>
+				<li>Multicast - User sends a packet to multiple targets, i.g. Sending an email to multiple people.</li>
+				<li>Broadcast - User sends the packet to everyone on the network, i.g. When the user sends out a notification to everyone in the LAN letting them know about something very important.</li>
+			</ul>
+		</p>
+		<p>
+			In a packet, the source address will <span style="font-weight:bold; color:red">always</span> be unicast. There will always be one sender. The Destination address, however, can be unicast, multicast, or broadcast.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<p>
+			An Ethernet packet frame will look like the following (click image to enlarge):
+		</p>
+		<img src="Ethernet Frame.png" onclick="enlargeImg()" id="myImg" style="display:block; margin:auto; user-select:none; width:100%; cursor:pointer">
+		
+		<div id="myModal" class="modal">
+			<span class="close">&times;</span>
+			<img src="Ethernet Frame.png" class="modal-content" id="img01">
+		</div>
+		<p>
+			The first two fields are relatively self-explanatory. Below is a brief explaination of each field:
+		</p>
+		<p>
+			<span style="color:red">Destination Address</span> - This is the address of the target of whom the packet is meant to go to. This section is 6 bytes.
+		</p>
+		<p>
+			<span style="color:red">Source Address</span> - This is the address of the sender who sent the packet. This section is 6 bytes.
+		</p>
+		<p>
+			<span style="color:red">Type Field</span> - This lets the computer know a brief summary of what it can expect to see in the data field (aka payload). This field is 2 bytes.
+		</p>
+		<p>
+			<span style="color:red">Data & Padding</span> - Also known as the Payload, this field carries the main information of the packet. This would carry things like information to load a website, confidential info from a government website, etc. This field's size can range from 46 - 1500 bytes. If this field is less than 46 bytes, then there is padding (empty data) added into the payload to make sure that the packet meets the minimum packet length. An Ethernet frame must be at least 64 bytes long in order to be sent out. This is to ensure that everything arrives in tact and nothing gets lost during transmission.
+		</p>
+		<p>
+			<span style="color:red">CRC</span> - CRC stands for Cyclic Redundancy Check. CRC is an error-detecting code used to determine if a block of data has been corrupted. This field is 4 bytes big.
+		</p>
+	</div>
+	
+	<button onclick="topFunction()" id="myBtn">Top</button>
+</body>
+</html>

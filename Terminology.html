@@ -1,0 +1,132 @@
+<html>
+<head>
+	<title>Terminology</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="Tab-Icon.png">
+	<script src="jquery-3.3.1.min.js"></script>
+<script src="Website-JavaScript.js"></script>
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="home.html">
+			<img src="Header.png" id="StickyImg">
+		</a>
+	</div>
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+	<a href="home.html" class="calcHeight">Home</a>
+	<div class="slideToggle removeStuff">
+		<div class="Dropdown noJS">
+			<a class="closeOpen removeStuff">Binary & Hex</a>
+			<div class="Dropbtn removeStuff">
+				<a href="Binary&Hex/Binary.html">Binary</a>
+				<a href="Binary&Hex/Hex.html">Hexadecimal</a>
+				<div>
+					<a class="openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+					<div class="Dropdown-Content removeStuff DropContentWidth">
+						<a href="Binary&Hex/DEC-to-BI.html">Page 1<br>DEC to BI</a>
+						<a href="Binary&Hex/BI-to-HEX.html">Page 2<br>BI to HEX</a>
+						<a href="Binary&Hex/DEC-to-HEX.html">Page 3<br>DEC to HEX</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="Dropdown noJS">
+			<a class="closeOpen removeStuff">Protocols</a>
+			<div class="Dropbtn removeStuff">
+				<a href="Protocols/DHCP.html">DHCP</a>
+				<a href="Protocols/DNS.html">DNS</a>
+				<a href="Protocols/HTTP.html">HTTP</a>
+				<a href="Protocols/Ethernet.html">Ethernet</a>
+			</div>
+		</div>
+		<div class="Dropdown noJS">
+			<a class="closeOpen removeStuff">Equipment</a>
+			<div class="Dropbtn removeStuff EquipWidth">
+				<a href="Equipment/Routers.html">Routers</a>
+				<a href="Equipment/Switches.html">Switches</a>
+			</div>
+		</div>
+		<a class="active closeOpen removeStuff">Terminology</a>
+		<a href="About.html" class="closeOpen removeStuff">About</a>
+	</div>
+	<a class="icon" onclick="myFunction()">
+		<i class="bars"></i>
+	</a>
+</div>
+	<!---------- End of NavBar ---------->
+	
+	<noscript>
+		<div class="Text-Body Text-Body-noJava">
+			<h2 style="color:black">JavaScript is Disabled</h2>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				It appears that JavaScript is disabled in your browser. Some of the functionality of this website relies on JavaScript. Please enable JavaScript in your browser then refresh this page.
+			</p>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				Don't know how to turn JavaScript on? <a href="HowToEnableJavaScript.html" class="Link">Here's how to enable JavaScript</a>
+			</p>
+		</div>
+	</noscript>
+	
+	<div class="Text-Body">
+		<h1>
+		<span class="scaleSize">RAM</span>
+	</h1>
+		<p>
+			RAM stands for <span style="font-weight:bold">Random Access Memory</span>. It's the memory that your computer (and other technological devices) use to run things like apps and processesses that must run in order to keep your device up and running. RAM is volatile (meaning the information it's storing will get lost if you power down the device) and is basically temporary memory.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+		<span class="scaleSize">BIOS</span>
+	</h1>
+		<p>
+			BIOS stands for <span style="font-weight:bold">Basic Input Output System</span>. BIOS is a set of instructions for your device when it boots up. When you power on your device, it uses BIOS which tells it what to load, search, check, and find. One thing that the BIOS does is initiate the Bootloader which is responsible for finding the Operating System (OS).
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+		<span class="scaleSize">Microprocessor</span>
+	</h1>
+		<p>
+			A Microprocessor is a physical component inside your computer and it's an integrated circuit that contains all the functions of a CPU (Central Processing Unit) of a computer. The microprocessor is the component that performs the instructions and tasks involved in computer processing. This component executes and manages the logical instructions that gets passed to it.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+		<span class="scaleSize">LAN</span>
+	</h1>
+		<p>
+			LAN stands for <span style="font-weight:bold">Local Area Network</span>. This is a network of devices that are connected together that spans a building floor, several floors, or an entire building. LANs can span accross other buildings as long as the other buildings are within close proximity of each other. A LAN will consist of hosts (users), servers, switches, and routers.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+		<span class="scaleSize">WAN</span>
+	</h1>
+		<p>
+			A WAN <span style="font-weight:bold">(Wide Area Network)</span> consists of multiple LANs and spans accross wide areas. A LAN in Lancaster, PA that's connected to a LAN in Philadelphia, PA is a good example of a WAN. WANs can even spread accross much wider distances, such as a LAN in New York that's connected to a LAN in California.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+		<span class="scaleSize">VLAN</span>
+	</h1>
+		<p>
+			A VLAN <span style="font-weight:bold">(Virtural LAN)</span> exists on a switch and basically splits the switch into 2 or more separeate switches. A switch containing 2 VLANs will act as 2 switches. VLANs are useful for splitting up a large network into smaller sections. This helps a lot for convergence (when a change in the network has occured, the routers must get new updates. If a large network is split into smaller networks, the time it takes the routers to update the network topology will be significantly less).
+		</p>
+	</div>
+	
+	<div class="page">
+		<span class="LastFirstPage"> &#11160; Previous</span>
+		<a class="ActivePage PageSelector">1</a>
+		<a class="PageSelector" href="Terminology_Page2.html">2</a>
+		<a class="PageSelector" href="Terminology_Page3.html">3</a>
+		<a class="PageSelector" href="Terminology_Page2.html">Next &#11162; </a>
+	</div>
+	
+	<button onclick="topFunction()" id="myBtn">Top</button>
+</body>
+</html>

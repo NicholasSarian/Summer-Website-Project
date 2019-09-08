@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>Convert Decimal to Binary & Binary to Decimal</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="../Tab-Icon.png">
+	<script src="../jquery-3.3.1.min.js"></script>
+	<script src="../Website-JavaScript.js"></script>
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="../home.html">
+			<img src="../Header.png" id="StickyImg">
+		</a>
+	</div>
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+		<a href="../home.html" class="calcHeight">Home</a>
+		<div class="slideToggle">
+			<div class="Dropdown noJS">
+				<a class="active closeOpen removeStuff">Binary & Hex</a>
+				<div class="Dropbtn removeStuff">
+					<a href="Binary.html">Binary</a>
+					<a href="Hex.html">Hexadecimal</a>
+					<div>
+						<a class="active openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+						<div class="Dropdown-Content removeStuff DropContentWidth">
+							<a class="active">Page 1<br>DEC to BI</a>
+							<a href="BI-to-HEX.html">Page 2<br>BI to HEX</a>
+							<a href="DEC-to-HEX.html">Page 3<br>DEC to HEX</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen">Protocols</a>
+				<div class="Dropbtn removeStuff">
+					<a href="../Protocols/DHCP.html">DHCP</a>
+					<a href="../Protocols/DNS.html">DNS</a>
+					<a href="../Protocols/HTTP.html">HTTP</a>
+					<a href="../Protocols/Ethernet.html">Ethernet</a>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen">Equipment</a>
+				<div class="Dropbtn removeStuff EquipWidth">
+					<a href="../Equipment/Routers.html">Routers</a>
+					<a href="../Equipment/Switches.html">Switches</a>
+				</div>
+			</div>
+			<a href="../Terminology.html" class="closeOpen removeStuff">Terminology</a>
+			<a href="../About.html" class="closeOpen removeStuff">About</a>
+		</div>
+		<a class="icon" onclick="myFunction()">
+			<i class="bars"></i>
+		</a>
+	</div>
+	<!---------- End of NavBar ---------->
+	
+	<noscript>
+		<div class="Text-Body Text-Body-noJava">
+			<h2 style="color:black">JavaScript is Disabled</h2>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				It appears that JavaScript is disabled in your browser. Some of the functionality of this website relies on JavaScript. Please enable JavaScript in your browser then refresh this page.
+			</p>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				Don't know how to turn JavaScript on? <a href="HowToEnableJavaScript.html" class="Link">Here's how to enable JavaScript</a>
+			</p>
+		</div>
+	</noscript>
+	
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Convert Decimal to Binary</span>
+		</h1>
+		<p>
+			To start, let's use the number 60 as an example. To convert 60 into binary, you must first keep in mind the values of binary. As a reminder (I highly suggest you read the <a href="Binary.html" class="Link">binary</a> page first before reading this. You'll know what's happening here if you do.), a binary number has 8 bits. I would suggest working from left to right for this. Let's start with this binary number: <span style="color:red">00000000</span>
+		</p>
+		<p>
+			Currently the above is all 0's. That will change when we figure out which ones will become a 1. Here's how I would convert decimal to binary. First I would take the first bit (decimal 128) and see if the number is bigger than it. Since 60 is less than 128, the first bit (starting from the left) will remain a 0. Next is 64. 60 is less than 64 so that remains a 0. Nothing has changed so far.
+		</p>
+		<p>
+			Now we go on to the next one, which is 32, and here's where the real conversion starts. 60 is greater than 32 so you change that bit to a 1 and subtract 32 from 60 which equals 28.
+		</p>
+		<p>
+			Next bit is 16. 28 is greater than 16 so set that bit to a 1 and subtract 16 from 28 to get 12.
+		</p>
+		<p>
+			Next is 8. 12 is greater than 8 so set that bit to 1 and subtract 8 from 12 to get 4.
+		</p>
+		<p>
+			The next bit is 4 and this is ultimately the last bit we need to set to 1 because the remainder is 4. 4 - 4 = 0. The binary number ends up looking like this: <span style="color:red">00111100</span>
+		</p>
+		<p>
+			I hope that wasn't too confusing. Basically, in this method, you would work with the binary string from left to right and subtract as you go, making the original number smaller and smaller until it becomes 0. This is easier if you start with writing out 8 0's then gradually replacing the 0's with 1's as they fit according to the calculation.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Convert Binary to Decimal</span>
+		</h1>
+		<p>
+			Now that you've learn how to convert decimal to binary, it's time to reverse it! In my opinion, this is slightly easier than converting decimal to binary. All you do is simply look at the binary number and add accordingly. You can add in either direction, you'll get the same result regardless. If the binary bit is a 0, move onto the next bit. If the bit is a 1, add the bits value (according to its position in the string) and continue going until you've added all the bits that contain a 1.
+		</p>
+		<p>
+			Let's put that into play. We have the binary string <span style="color:red">00111100</span> and we need to reverse the conversion. I'm going to convert this from left to right just because I feel like doing it that way; you can convert it from right to left and get the same result. The first bit is a 0 so we move onto the next bit. The next one is also a 0 so we keep moving on. The 3rd bit from the left is a 1. Its value is 32 so we add that to our calculator. Next is also a 1 and this one is 16 so we add that to 32 (32 + 16). Next bit is a 1 and that one is 8 so we add that to our calculation (32 + 16 + 8). The next bit is the last one that has a 1 and that one is 4 so we add that to our calculation (32 + 16 + 8 + 4) and when you hit enter, you end up with 60. Easy, right? See, that wasn't that hard. I think it's easier to convert binary to decimal than it is to convert decimal to binary.
+		</p>
+	</div>
+	
+	<button onclick="topFunction()" id="myBtn">Top</button>
+</body>
+</html>

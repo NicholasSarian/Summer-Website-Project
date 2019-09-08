@@ -1,0 +1,102 @@
+<html>
+<head>
+	<title>Routers</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="../Tab-Icon.png">
+	<script src="../jquery-3.3.1.min.js"></script>
+	<script src="../Website-JavaScript.js"></script>
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="../home.html">
+			<img src="../Header.png" id="StickyImg">
+		</a>
+	</div>
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+		<a href="../home.html" class="calcHeight">Home</a>
+		<div class="slideToggle">
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Binary & Hex</a>
+				<div class="Dropbtn removeStuff">
+					<a href="../Binary&Hex/Binary.html">Binary</a>
+					<a href="../Binary&Hex/Hex.html">Hexadecimal</a>
+					<div>
+						<a class="openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+						<div class="Dropdown-Content removeStuff DropContentWidth">
+							<a href="../Binary&Hex/DEC-to-BI.html">Page 1<br>DEC to BI</a>
+							<a href="../Binary&Hex/BI-to-HEX.html">Page 2<br>BI to HEX</a>
+							<a href="../Binary&Hex/DEC-to-HEX.html">Page 3<br>DEC to HEX</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Protocols</a>
+				<div class="Dropbtn removeStuff">
+					<a href="../Protocols/DHCP.html">DHCP</a>
+					<a href="../Protocols/DNS.html">DNS</a>
+					<a href="../Protocols/HTTP.html">HTTP</a>
+					<a href="../Protocols/Ethernet.html">Ethernet</a>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="active closeOpen removeStuff">Equipment</a>
+				<div class="Dropbtn removeStuff EquipWidth">
+					<a class="active">Routers</a>
+					<a href="Switches.html">Switches</a>
+				</div>
+			</div>
+			<a href="../Terminology.html" class="closeOpen removeStuff">Terminology</a>
+			<a href="../About.html" class="closeOpen removeStuff">About</a>
+		</div>
+		<a class="icon" onclick="myFunction()">
+			<i class="bars"></i>
+		</a>
+	</div>
+	<!---------- End of NavBar ---------->
+	
+	<noscript>
+		<div class="Text-Body Text-Body-noJava">
+			<h2 style="color:black">JavaScript is Disabled</h2>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				It appears that JavaScript is disabled in your browser. Some of the functionality of this website relies on JavaScript. Please enable JavaScript in your browser then refresh this page.
+			</p>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				Don't know how to turn JavaScript on? <a href="HowToEnableJavaScript.html" class="Link">Here's how to enable JavaScript</a>
+			</p>
+		</div>
+	</noscript>
+	
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Routers</span>
+		</h1>
+			<img src="Router.png" id="CenterImg" width="75%">
+		<p>
+			The primary function of a router is to provide network connectivity between networks. With a router, you are able to communicate between one network to other networks. For example, a router would be used if you have a network and you would like to be able to use the internet. In order to use the internet, you must have a router because that would be the only way you can send packets outside of your network out to other networks.
+		</p>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">How Do Routers Work?</span>
+		</h1>
+		<p>
+			Let's say you're on your web browser and you typed in a web page, since the web page is on a different network, you will have to go through the Default Gateway. The Default Gateway is basically a router that allows you to go out onto different networks. The packets you send will go to the default gateway. The router will have routing protocols such as OSPF and EIGRP. I'm going to briefly go over what these protocols are before continuing:
+		</p>
+		<p>
+			<span style="color:red">OSPF</span> stands for Open Shortest Path First and it's one of the routing protocols available. OSPF uses cost as its way of determining the route to send packets on. Cost is the speed of the link. Lower speed equals higher cost. Higher speed equals lower cost. The path a packet will take using OSPF will depend on the speed of each possible path. The one with the lowest cost will be the one the packet travels down. If there happens to be two paths that has the same cost, OSPF will just send the packet down both paths and hope that at least one of them reaches the target.
+		</p>
+		<p>
+			<span style="color:red">EIGRP</span> stands for Enhanced Interior Gateway Routing Protocol. EIGRP relies on bathwidth and delay time to determine the route a packet will take. The route with the highest bandwidth (the amount of data that can travel down a cable in a certain amount of time) and has the lowest delay time will be the route the packet will travel down.
+		</p>
+		<p>
+			As for how routers work, they would use one of these routing protocols and build a table called a Routing Table. The routing table consists of networks and which port the packet must be sent out of in order to reach that network. The routing protocols will learn about networks by sending updates to and receiving updates from its neighbor routers. The router will send out an update about the network it knows of and will receive packets from other routers letting the router know what networks they know of. When you try to connect to a website, your packet goes to the router. The router will look at the destination address and compare the network of the destination address to the networks in its Routing Table. If the router is unable to find out where to send the packet, the router will discard the packet and send a Destination Host Unreachable packet back to the sender. If the router is able to find the network to send the packet off to, the router will forward the packet out that port.
+		</p>
+	</div>
+	
+	<button onclick="topFunction()" id="myBtn">Top</button>
+</body>
+</html>

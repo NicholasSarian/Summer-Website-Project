@@ -1,0 +1,187 @@
+<html>
+<head>
+	<title>Home Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="PageStyle.css" type="text/css" media="screen">
+	<link rel="icon" href="Tab-Icon.png">
+	<script src="jquery-3.3.1.min.js"></script>
+	<script src="Website-JavaScript.js"></script>
+</head>
+<body>
+	<div id="HeaderContainer">
+		<span id="helper"></span>
+		<a href="home.html">
+			<img src="Header.png" id="StickyImg">
+		</a>
+	</div>
+	
+	<!---------- Start of NavBar ---------->
+	<div class="NavBar" id="myNavBar">
+		<a class="active calcHeight">Home</a>
+		<div class="slideToggle removeStuff">
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Binary & Hex</a>
+				<div class="Dropbtn removeStuff">
+					<a href="Binary&Hex/Binary.html">Binary</a>
+					<a href="Binary&Hex/Hex.html">Hexadecimal</a>
+					<div>
+						<a class="openUp">Conversion<span class="changeCaret">&#9660;</span></a>
+						<div class="Dropdown-Content removeStuff DropContentWidth">
+							<a href="Binary&Hex/DEC-to-BI.html">Page 1<br>DEC to BI</a>
+							<a href="Binary&Hex/BI-to-HEX.html">Page 2<br>BI to HEX</a>
+							<a href="Binary&Hex/DEC-to-HEX.html">Page 3<br>DEC to HEX</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Protocols</a>
+				<div class="Dropbtn removeStuff">
+					<a href="Protocols/DHCP.html">DHCP</a>
+					<a href="Protocols/DNS.html">DNS</a>
+					<a href="Protocols/HTTP.html">HTTP</a>
+					<a href="Protocols/Ethernet.html">Ethernet</a>
+				</div>
+			</div>
+			<div class="Dropdown noJS">
+				<a class="closeOpen removeStuff">Equipment</a>
+				<div class="Dropbtn removeStuff EquipWidth">
+					<a href="Equipment/Routers.html">Routers</a>
+					<a href="Equipment/Switches.html">Switches</a>
+				</div>
+			</div>
+			<a href="Terminology.html" class="closeOpen removeStuff">Terminology</a>
+			<a href="About.html" class="closeOpen removeStuff">About</a>
+		</div>
+		<a class="icon" onclick="myFunction()">
+			<i class="bars"></i>
+		</a>
+	</div>
+	<!---------- End of NavBar ---------->
+	
+	<noscript>
+		<div class="Text-Body Text-Body-noJava">
+			<h2 style="color:black">JavaScript is Disabled</h2>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				It appears that JavaScript is disabled in your browser. Some of the functionality of this website relies on JavaScript. Please enable JavaScript in your browser then refresh this page.
+			</p>
+			<p class="Text-Body-Center" style="text-indent: 0">
+				Don't know how to turn JavaScript on? <a href="HowToEnableJavaScript.html" class="Link">Here's how to enable JavaScript</a>
+			</p>
+		</div>
+	</noscript>
+	
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Binary</span>
+		</h1>
+		<p class="Text-Body-Center" style="text-indent: 0">
+			If you want to learn what binary is and how to count it, go here:
+		</p>
+		<div class="CenterButton">
+			<a href="Binary&Hex/Binary.html" class="button">Learn Binary</a>
+		</div>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Hexadecimal</span>
+		</h1>
+		<p class="Text-Body-Center" style="text-indent: 0">
+			If you want to learn what hexadecimal is and how to count it, go here:
+		</p>
+		<div class="CenterButton">
+			<a href="Binary&Hex/Hex.html" class="button">Learn Hexadecimal</a>
+		</div>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Conversion</span>
+		</h1>
+		<p class="Text-Body-Center" style="text-indent: 0">
+			Want to know how to convert between decimal (DEC), hexadecimal (HEX), and binary (BI)? Click on the button below:
+		</p>
+		<div class="CenterButton">
+			<a href="Binary&Hex/Convert.html" class="button">Learn Conversion</a>
+		</div>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">DHCP</span>
+		</h1>
+		<p class="Text-Body-Center" style="text-indent: 0">
+			Learn what DHCP stands for and how it works
+		</p>
+		<div class="CenterButton">
+			<a href="Protocols/DHCP.html" class="button">Learn DHCP</a>
+		</div>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">DNS</span>
+		</h1>
+		<p class="Text-Body-Center" style="text-indent: 0">
+			You'll learn and get to understand what DNS is really about.
+		</p>
+		<div class="CenterButton">
+			<a href="Protocols/DNS.html" class="button">Learn DNS</a>
+		</div>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">HTTP</span>
+		</h1>
+		<p class="Text-Body-Center" style="text-indent: 0">
+			Want to know more about HTTP? Click the button below to find out more!
+		</p>
+		<div class="CenterButton">
+			<a href="Protocols/HTTP.html" class="button">Learn about HTTP</a>
+		</div>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Ethernet</span>
+		</h1>
+		<p class="Text-Body-Center" style="text-indent: 0">
+			Learn more about Ethernet
+		</p>
+		<div class="CenterButton">
+			<a href="Protocols/Ethernet.html" class="button">Learn what Ethernet is</a>
+		</div>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Routers</span>
+		</h1>
+		<p class="Text-Body-Center" style="text-indent: 0">
+			Routers are interesting. Routers provide connectivity between networks.
+		</p>
+		<div class="CenterButton">
+			<a href="Equipment/Routers.html" class="button">Learn about Routers</a>
+		</div>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Switches</span>
+		</h1>
+		<p class="Text-Body-Center" style="text-indent: 0">
+			Switches are a little simplier than routers but still equally as interesting.
+		</p>
+		<div class="CenterButton">
+			<a href="Equipment/Switches.html" class="button">Learn about Switches</a>
+		</div>
+	</div>
+	<div class="Text-Body">
+		<h1>
+			<span class="scaleSize">Important Terminology</span>
+		</h1>
+		<p class="Text-Body-Center" style="text-indent: 0">
+			Here are some technical terms you should know if you're interested in knowing some networking terms.
+		</p>
+		<div class="CenterButton">
+			<a href="Terminology.html" class="button">Learn Terminology</a>
+		</div>
+	</div>
+	
+	<button onclick="topFunction()" id="myBtn">Top</button>
+</body>
+</html>
